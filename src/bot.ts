@@ -48,7 +48,7 @@ async function saveEmail(chatId: number, email: string) {
   try {
     await prisma.user.create({
       data: {
-        id: chatId,
+        chatId: chatId.toString(),
         email: email,
       },
     });
