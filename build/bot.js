@@ -51,7 +51,7 @@ function saveEmail(chatId, email) {
         try {
             yield prisma.user.create({
                 data: {
-                    id: chatId,
+                    chatId: chatId.toString(),
                     email: email,
                 },
             });
