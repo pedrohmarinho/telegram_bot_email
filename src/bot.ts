@@ -16,7 +16,7 @@ let isWaitingForEmail: boolean = false;
 bot.onText(/\/start/, async (msg: TelegramBot.Message) => {
   const chatId = msg.chat.id;
 
-  if (horaFuncionamento) {
+  if (!horaFuncionamento) {
     const botMessage: string =
       "Acesse o site da FAESA para dar prosseguimento: https://www.faesa.br/";
     return bot.sendMessage(chatId, botMessage);

@@ -25,7 +25,7 @@ let isWaitingForEmail = false;
 // Primeira Parte
 bot.onText(/\/start/, (msg) => __awaiter(void 0, void 0, void 0, function* () {
     const chatId = msg.chat.id;
-    if (horaFuncionamento) {
+    if (!horaFuncionamento) {
         const botMessage = "Acesse o site da FAESA para dar prosseguimento: https://www.faesa.br/";
         return bot.sendMessage(chatId, botMessage);
     }
